@@ -16,18 +16,14 @@ vector<string> split(const string &);
  */
 
 int designerPdfViewer(vector<int> h, string word) {
-    int maxHeight = 0;
-
-    // Find the tallest letter in the word
-    for (char c : word) {
-        //FINDING THE INDEX OF EACH GIVEN CHARACTER.
-        int index = c - 'a';  // Convert char to index (0-based)    eg: e-b =(4-1)=3
-        
-        maxHeight = max(maxHeight, h[index]);   //checking for the largest number.
+    int maxi=0;
+    
+    for(char c: word){
+        int indexing = c -'a'; //finding indexing values of each letter(0 indexing). eg: e --> e-b --> (4-1)=3
+        maxi = max(maxi,h[indexing]);    //check is the number is maximum among all the letters.
     }
-
-    // Calculate the highlighted area --> maxHeight*length
-    return maxHeight * word.length();
+    //calculating highlighted area.
+    return maxi*word.length();
 }
 
 int main()
