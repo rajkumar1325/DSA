@@ -17,8 +17,10 @@ string rtrim(const string &);
 
 /*
             Approach
-    1. find the perfect total number of repeatation
-    2. find the remaining character repeatation
+    1. Check how many characters are matching with the target        
+    2 find the perfect total number of repeatation
+    3. find the remaining character repeatation
+    
     3. add total + remainder.
 */
 long repeatedString(string s, long n) {
@@ -32,13 +34,14 @@ long repeatedString(string s, long n) {
     }
     cout<<"The numbr of a inside string is "<<count<<endl;
     
-    //Finding total perfect repeatation
     int arraySize = s.length();
     cout<<"length " <<s.length();
-    
+
+    //Finding total perfect repeatation
     long perfectRepeat = n/arraySize; //perfect repeatation
     cout<<"Total perfect repeatation "<<perfectRepeat<<endl;
     
+    // finding remainder repeatation
     long remainder = n%arraySize;
     cout<<"remainder "<<remainder<<endl;
     
