@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int main(){
     int number = 6; 
     char ch = 'A'; //CREATING A STARTING VARIABLE
