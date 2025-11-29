@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // ....................................2 pointer approach..............................................
+//.........note: For 2 pointer approach we always compare indexes inside the while loop, never compare values inside it.
 /*
     KEY RULES TO REMEMBER -- {This ONLY works because the array is sorted.}
     ✔ If sum < target → move left forward
@@ -19,7 +20,7 @@ int main(){
     int left = 0;
     int right = n-1;
 
-    while (arr[left]<arr[right])
+    while (left<right)
     {
         if(arr[left] + arr[right] == target){
             cout<<"Found and the elements are "<< arr[left]<< "and" << arr[right];
